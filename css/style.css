@@ -1,0 +1,396 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    text-align: center;
+}
+
+header {
+    background-color: #007bff;
+    color: white;
+    padding: 30px 20px;
+}
+
+header img {
+    width: 150px; /* Logo size */
+    margin-bottom: 20px;
+}
+
+header h1 {
+    font-size: 2.6em;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1.2em;
+}
+
+main {
+    padding: 40px 20px;
+}
+
+h2 {
+    font-size: 2.2em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* PDF Section */
+#pdf-section {
+    margin-top: 30px;
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.category-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.category {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    flex: 1 1 150px;
+    max-width: 200px;
+}
+
+.category:hover {
+    background-color: #0056b3;
+}
+
+.pdf-text {
+    margin-bottom: 15px;
+    font-size: 1.1em;
+    color: #555;
+}
+
+/* MCQ Section */
+#mcq-section {
+    margin-top: 40px;
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.mcq-option {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.mcq-option:hover {
+    background-color: #218838;
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    z-index: 10;
+    max-width: 400px;
+}
+
+.popup.active {
+    display: block;
+}
+
+.popup input {
+    padding: 10px;
+    width: 100%;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.popup button {
+    padding: 10px 20px;
+    background-color: #17a2b8;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.popup button:hover {
+    background-color: #138496;
+}
+
+.close-btn {
+    background: none;
+    color: #dc3545;
+    border: none;
+    font-size: 1.5em;
+    cursor: pointer;
+    float: right;
+    margin-bottom: 10px;
+}
+
+/* About Section */
+#about {
+    background-color: #6c757d;
+    color: white;
+    padding: 40px 20px;
+    margin-top: 40px;
+}
+
+#about h2 {
+    font-size: 2.4em;
+    margin-bottom: 20px;
+}
+
+#about p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+#about img {
+    width: 150px;
+    margin-top: 15px;
+}
+
+/* Footer */
+footer {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #007bff;
+    color: white;
+}
+
+footer a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #ffc107;
+    color: black;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+footer a:hover {
+    background-color: #e0a800;
+}
+
+footer .whatsapp-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer .whatsapp-link img {
+    margin-right: 10px;
+    width: 24px;
+    
+}
+
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2.2em;
+    }
+
+    header p {
+        font-size: 1.1em;
+    }
+
+    .category {
+        padding: 10px 15px;
+        font-size: 0.9em;
+    }
+
+    footer {
+        font-size: 0.9em;
+    }
+
+    #about h2 {
+        font-size: 2em;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.8em;
+    }
+
+    header p {
+        font-size: 0.9em;
+    }
+
+    .category {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+
+    footer {
+        font-size: 0.8em;
+    }
+}
+
+#payments {
+    margin-top: 40px;
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+#payments h2 {
+    font-size: 2.2em;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+#payments p {
+    font-size: 1.1em;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.qr-code {
+    width: 200px;
+    margin-bottom: 20px;
+}
+
+#payNowBtn {
+    background-color: #28a745;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    font-size: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#payNowBtn:hover {
+    background-color: #218838;
+}
+
+#whatsappRedirect {
+    margin-top: 20px;
+}
+
+#whatsappRedirect button {
+    background-color: #007bff;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#whatsappRedirect button:hover {
+    background-color: #0056b3;
+}
+
+/* Terms and Conditions Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #007bff;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+header h1 {
+    font-size: 2.5em;
+    margin: 0;
+}
+
+.terms-container {
+    max-width: 900px;
+    margin: 40px auto;
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.terms-container h2 {
+    font-size: 2.2em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.terms-container p {
+    font-size: 1.1em;
+    margin: 10px 0;
+    color: #555;
+}
+
+.terms-content h3 {
+    font-size: 1.4em;
+    color: #007bff;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.terms-content p {
+    font-size: 1.1em;
+    color: #444;
+}
+
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #007bff;
+    color: white;
+}
+
+.whatsapp-link {
+    margin-top: 20px;
+}
+
+.whatsapp-link img {
+    width: 30px;
+    vertical-align: middle;
+}
+
+.whatsapp-link a {
+    color: white;
+    font-size: 1.1em;
+    margin-left: 10px;
+    text-decoration: none;
+}
+
+.whatsapp-link a:hover {
+    text-decoration: underline;
+}

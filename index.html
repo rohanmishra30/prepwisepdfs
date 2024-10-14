@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PrepWise PDFs - Affordable PDF Notes and MCQ Practice Sets</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="PrepWise PDFs provides high-quality, affordable PDF notes and MCQ practice sets for exams like UPSC, NEET, JEE, and more.">
+    <meta name="keywords" content="PrepWise PDFs, affordable PDF notes, exam preparation, UPSC PDFs, NEET PDFs, JEE PDFs, competitive exams, MCQ practice sets">
+    <meta name="author" content="PrepWise PDFs">
+    <meta name="robots" content="index, follow">
+    <link rel="stylesheet" href="css/style.css"> <!-- Link to CSS file -->
+</head>
+<body>
+    <header>
+        <img src="logo-placeholder.png" alt="PrepWise Logo"> <!-- Placeholder for logo -->
+        <h1>PrepWise PDFs</h1>
+        <p>Affordable PDF notes and MCQ practice sets for exam aspirants</p>
+    </header>
+
+    <main>
+        <!-- PDF Section -->
+        <section id="pdf-section">
+            <h2>Need PDF?</h2>
+            <p class="pdf-text">Select your category to get the PDFs</p>
+            <div class="category-list">
+                <button class="category" onclick="sendWhatsApp('One Day Exams')">One Day Exams</button>
+                <button class="category" onclick="sendWhatsApp('UPSC/PCS')">UPSC/PCS</button>
+                <button class="category" onclick="sendWhatsApp('NEET')">NEET</button>
+                <button class="category" onclick="sendWhatsApp('JEE')">JEE</button>
+                <button class="category" onclick="sendWhatsApp('Programming')">Programming</button>
+            </div>
+        </section>
+
+        <!-- MCQ Practice Set Section -->
+        <section id="mcq-section">
+            <h2>MCQ Practice Set</h2>
+            <p>Choose an option for your practice</p>
+            <div>
+                <button class="mcq-option" onclick="sendWhatsApp('Mix Questions')">Mix Questions</button>
+                <button class="mcq-option" onclick="showPopup()">Topic-wise Questions</button>
+            </div>
+        </section>
+
+        <!-- Popup for Topic-wise Questions -->
+        <div class="popup" id="popup">
+            <button class="close-btn" onclick="hidePopup()">X</button>
+            <input type="text" id="topicInput" placeholder="Enter Topic Name">
+            <button onclick="sendTopic()">Submit</button>
+        </div>
+    </main>
+
+    <section id="payments">
+        <h2>Payments</h2>
+        <p>Pay ₹11 on this UPI QR code or click the "Pay Now" button to use other payment methods.</p>
+        
+        <!-- Razorpay QR code image -->
+        <img src="razorpay-qr-placeholder.png" alt="Razorpay QR Code" class="qr-code">
+        
+        <!-- Pay Now button -->
+        <div>
+            <button id="payNowBtn" onclick="openRazorpay()">Pay Now</button>
+        </div>
+        
+        <!-- Redirect to WhatsApp after payment -->
+        <div id="whatsappRedirect" style="display:none;">
+            <p>Payment successful! Click the button below to message us on WhatsApp.</p>
+            <button onclick="redirectToWhatsApp()">Message on WhatsApp</button>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <h2>About Us</h2>
+    <p>Welcome to <strong>PrepWise PDFs</strong>, your trusted companion in exam preparation! Our mission is simple yet powerful: to provide affordable, high-quality resources for students preparing for various competitive exams. Whether you are gearing up for government exams like <strong>UPSC/PCS</strong>, engineering entrance tests like <strong>JEE</strong>, medical entrance exams like <strong>NEET</strong>, or even preparing for programming and other professional certifications, we’ve got you covered.</p>
+    
+    <p>At <strong>PrepWise PDFs</strong>, we understand the pressure that comes with competitive exams. That’s why we aim to simplify your preparation process by offering meticulously curated <strong>PDF notes</strong>, <strong>MCQ practice sets</strong>, and <strong>topic-wise question papers</strong>. Our materials are crafted by experts who have deep knowledge in their respective fields, ensuring that you get the best content to excel in your exams.</p>
+    
+    <p>We believe in making education accessible to all, which is why our resources are available at minimal prices, without compromising on quality. From comprehensive study materials to precise and exam-focused practice sets, we ensure you have everything you need to achieve your academic goals.</p>
+    
+    <p>What sets us apart is our focus on personalized learning. With <strong>topic-wise practice questions</strong> and customized PDF notes, we offer the flexibility to focus on the subjects and areas you need the most help with. Whether you need to review a specific topic or practice mixed questions, <strong>PrepWise PDFs</strong> provides a tailored approach that fits your unique preparation style.</p>
+    
+    <p>Our journey began with a simple vision—to democratize access to exam preparation tools. Over time, we’ve grown into a platform trusted by hundreds of students, and our commitment remains the same: to empower students by providing affordable, reliable, and easy-to-access materials that make a real difference in their studies.</p>
+    
+    <p>We are not just another platform selling study material; we are your partners in success. Our team is dedicated to ensuring that every student, regardless of their financial situation, has access to quality preparation tools. That's why we strive to keep our pricing incredibly affordable, so that education remains accessible for all.</p>
+    
+    <p><strong>PrepWise PDFs</strong> is more than just notes and practice sets. We’re a growing community of students working towards a brighter future, one exam at a time. Join us on this journey and take the next step towards acing your exams.</p>
+</section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="whatsapp-link">
+            
+            <a href="https://api.whatsapp.com/send?phone=9315266233" target="_blank"><img src="img/whatsapp.png" alt="WhatsApp Icon"> Message on WhatsApp</a>
+        </div>
+        <div id="">
+            <a href="/terms/terms.html">Terms and Conditions</a>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script> <!-- Link to JavaScript file -->
+</body>
+</html>
