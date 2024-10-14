@@ -394,3 +394,15 @@ footer {
 .whatsapp-link a:hover {
     text-decoration: underline;
 }
+
+footer p {
+    margin-top: 10px;
+    font-size: 0.9em;
+    color: white;
+}
+.contact-details {
+    margin-top: 10px;
+    font-size: 0.9em;
+    color: white;
+    text-align: center; 
+}
