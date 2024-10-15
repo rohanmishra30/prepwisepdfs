@@ -63,7 +63,7 @@ h2 {
     border: none;
     padding: 12px 20px;
     font-size: 1em;
-    border-radius: 5px;
+    border-radius: 50px;
     cursor: pointer;
     transition: background-color 0.3s ease;
     flex: 1 1 150px;
@@ -406,3 +406,5 @@ footer p {
     color: white;
     text-align: center; 
 }
+
+

@@ -1,5 +1,5 @@
 function sendWhatsApp(category) {
-    let phone = "9315266233"; // Replace with your actual phone number
+    let phone = "9315266233"; 
     let message = `Hi, I would like to get the PDF for ${category}.`;
     let whatsappUrl = `https://api.whatsapp.com/send?phone=${phone}&text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, '_blank');
