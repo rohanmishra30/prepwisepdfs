@@ -10,22 +10,72 @@ body {
     color: #333;
     text-align: center;
 }
-
+/* Header styling */
 header {
-    background-color: #007bff;
-    color: white;
-    padding: 30px 20px;
+    background-color: #3498db;
+    padding: 20px 0;
 }
 
-header img {
-    width: 150px; /* Logo size */
-    margin-bottom: 20px;
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative; /* Allows logo positioning */
+    padding: 0 20px; /* Padding for smaller screens */
 }
+
+/* Logo styling */
+.logo {
+    position: absolute;
+    left: 20px; /* Adjust padding on smaller screens */
+}
+
+.logo img {
+    width: 80px; /* Adjust the size as needed */
+    height: auto;
+    border-radius: 50%;
+}
+
+/* Header text styling */
+.header-title h1 {
+    font-size: 2rem; /* Use relative units for better scalability */
+    color: #fff;
+    text-align: center;
+    margin: 0;
+}
+
+/* Responsive styling for smaller screens */
+@media (max-width: 768px) {
+    .header-title h1 {
+        font-size: 1.5rem; /* Slightly smaller font for smaller screens */
+    }
+
+    .logo img {
+        width: 50px; /* Smaller logo on mobile screens */
+    }
+
+    .header-container {
+        padding: 0 10px; /* Less padding for mobile */
+    }
+}
+
+/* Extra small screens (e.g., phones) */
+@media (max-width: 480px) {
+    .header-title h1 {
+        font-size: 1.25rem; /* Further reduce font size on very small screens */
+    }
+
+    .logo img {  /*logo reponsive */
+        width: 40px; /* Smaller logo for small screens */
+        visibility: hidden;
+    }
+}
+
 
 header h1 {
     font-size: 2.6em;
     margin-bottom: 10px;
-}
+} */
 
 header p {
     font-size: 1.2em;
@@ -178,83 +228,6 @@ h2 {
     margin-top: 15px;
 }
 
-/* Footer */
-footer {
-    margin-top: 30px;
-    padding: 20px;
-    background-color: #007bff;
-    color: white;
-}
-
-footer a {
-    display: inline-block;
-    margin-top: 10px;
-    padding: 10px 20px;
-    background-color: #ffc107;
-    color: black;
-    border-radius: 5px;
-    text-decoration: none;
-    transition: background-color 0.3s ease;
-}
-
-footer a:hover {
-    background-color: #e0a800;
-}
-
-footer .whatsapp-link {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-footer .whatsapp-link img {
-    margin-right: 10px;
-    width: 24px;
-    
-}
-
-@media (max-width: 768px) {
-    header h1 {
-        font-size: 2.2em;
-    }
-
-    header p {
-        font-size: 1.1em;
-    }
-
-    .category {
-        padding: 10px 15px;
-        font-size: 0.9em;
-    }
-
-    footer {
-        font-size: 0.9em;
-    }
-
-    #about h2 {
-        font-size: 2em;
-    }
-}
-
-@media (max-width: 480px) {
-    header h1 {
-        font-size: 1.8em;
-    }
-
-    header p {
-        font-size: 0.9em;
-    }
-
-    .category {
-        flex: 1 1 100%;
-        max-width: 100%;
-    }
-
-    footer {
-        font-size: 0.8em;
-    }
-}
-
 #payments {
     margin-top: 40px;
     background-color: white;
@@ -368,38 +341,77 @@ header h1 {
     color: #444;
 }
 
+/* Footer General Styling */
 footer {
-    text-align: center;
-    padding: 20px 0;
+    margin-top: 30px;
+    padding: 20px;
     background-color: #007bff;
     color: white;
+    text-align: center;
+    position: relative; /* To position the logo on the left */
 }
 
-.whatsapp-link {
+footer a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #ffc107;
+    color: black;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+footer a:hover {
+    background-color: #e0a800;
+}
+
+/* Logo Placement in Footer */
+.footer-logo {
+    position: absolute;
+    top: 50%;
+    left: 50px; /* Adjust left spacing as needed */
+    transform: translateY(-50%);
+}
+
+.footer-logo img {
+    width: 150px; /* Adjust logo size */
+    height: auto;
+    border-radius: 50%;
+}
+
+/* WhatsApp Link Styling */
+footer .whatsapp-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     margin-top: 20px;
 }
 
-.whatsapp-link img {
-    width: 30px;
+footer .whatsapp-link img {
+    margin-right: 10px;
+    width: 24px;
     vertical-align: middle;
 }
 
-.whatsapp-link a {
+footer .whatsapp-link a {
     color: white;
     font-size: 1.1em;
     margin-left: 10px;
     text-decoration: none;
 }
 
-.whatsapp-link a:hover {
+footer .whatsapp-link a:hover {
     text-decoration: underline;
 }
 
+/* Contact Details Styling */
 footer p {
     margin-top: 10px;
     font-size: 0.9em;
     color: white;
 }
+
 .contact-details {
     margin-top: 10px;
     font-size: 0.9em;
@@ -407,4 +419,32 @@ footer p {
     text-align: center; 
 }
 
+/* Responsive Footer Adjustments */
+@media (max-width: 768px) {
+    footer {
+        font-size: 0.9em;
+    }
+
+    .footer-logo img {
+        width: 50px;
+    }
+
+    .whatsapp-link {
+        font-size: 0.9em;
+    }
+}
+
+@media (max-width: 480px) {
+    footer {
+        font-size: 0.8em;
+    }
+
+    .footer-logo img {
+        width: 40px;
+    }
+
+    .whatsapp-link {
+        font-size: 0.8em;
+    }
+}
 
