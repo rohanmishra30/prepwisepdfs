@@ -27,29 +27,43 @@ function sendTopic() {
 }
 function openRazorpay() {
     var options = {
-        "key": "YOUR_RAZORPAY_KEY_ID", // Replace with your Razorpay key ID
+        "key": "rzp_live_rfgJgZcYqyHqA5", // Your Razorpay key ID
         "amount": 1100, // Amount in paise (₹11 = 1100 paise)
         "currency": "INR",
         "name": "PrepWise PDFs",
         "description": "Payment for PDF notes and MCQ sets",
-        "image": "logo-placeholder.png", // Your logo image
+        "image": "../img/logo-new.jpeg", // Your logo image
         "handler": function (response) {
-            // Payment successful, show WhatsApp redirect button
+            // Payment successful, handle success here
+            alert("Payment successful! Payment ID: " + response.razorpay_payment_id);
+
+            // Show WhatsApp redirect button
             document.getElementById('whatsappRedirect').style.display = 'block';
         },
+        "modal": {
+            "ondismiss": function() {
+                // Payment canceled or failed, handle here
+                alert("Payment was canceled or failed. Please try again.");
+            }
+        },
         "prefill": {
-            "name": "",
-            "email": "",
-            "contact": ""
+            "name": "Rohan Mishra", // Customer's name
+            "email": "rohan@example.com", // Customer's email
+            "contact": "9315266233" // Customer's contact number
+        },
+        "notes": {
+            "purpose": "Payment for PDFs"
         },
         "theme": {
-            "color": "#007bff"
+            "color": "#007bff" // Custom color for the payment form
         }
     };
 
+    // Open Razorpay checkout
     var rzp = new Razorpay(options);
     rzp.open();
 }
+
 
 function redirectToWhatsApp() {
     let phone = "9315266233"; // Your WhatsApp number
